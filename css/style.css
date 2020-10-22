@@ -1,0 +1,594 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/* IMPORTACIÓ DE FONTS DE GOOGLE */
+
+html {
+    overflow: auto;
+}
+
+/* ATRIBUTS GENERALITZATS, COM ARA CANVI DE LLETRA I FONS*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../img/pattern.jpg);
+    min-height: 100vh;
+}
+
+p,
+ul,
+ol,
+td,
+th,
+label,
+input,
+textarea{
+    font-family: 'Lato', sans-serif;
+}
+
+a,
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+    background-image: url(../img/orange.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+h1.title {
+    margin-top: 0px;
+    padding-top: 0px;
+    text-transform: uppercase;
+}
+
+/* HEADER FLOTANT */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 20px grey;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/*LOGOTIP DEL HEADER */
+
+.logodiv {
+    height: 48px;
+    float: left;
+}
+
+.logodiv img {
+    margin-top: -20px;
+    height: 90px;
+    z-index: 9995;
+}
+
+/* LINKS DEL HEADER FLOTANT*/
+
+.headerlinks {
+    float: left;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+.headerlinks a {
+    text-transform: uppercase;
+    height: inherit;
+    padding: 15px;
+    line-height: 3.2;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.headerlinks a:hover {
+    background-color: black!important;
+    color: orange;
+    -webkit-transition: background-color .25s ease-out;
+    -moz-transition: background-color .25s ease-out;
+    -o-transition: background-color .25s ease-out;
+    transition: background-color .25s ease-out;
+}
+
+/*ENLLAÇ DE HOMEPAGE A LES PÀGINES DE CONTINGUT */
+
+.goback {
+    float: left;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    -webkit-transition: background-color .25s ease-out;
+    -moz-transition: background-color .25s ease-out;
+    -o-transition: background-color .25s ease-out;
+    transition: background-color .25s ease-out;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid orange;
+}
+
+.goback:hover {
+    background-color: rgba(255, 92, 0, 0.7);
+}
+
+.goback img {
+    float: left;
+    height: 25px;
+    -webkit-transition: filter .25s ease-out;
+    -moz-transition: filter .25s ease-out;
+    -o-transition: filter .25s ease-out;
+    transition: filter .25s ease-out;
+}
+
+.goback:hover img {
+    filter: invert(100%);
+}
+
+.goback p {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px;
+    font-size: 20px;
+    padding-right: 5px;
+    -webkit-transition: color .25s ease-out;
+    -moz-transition: color .25s ease-out;
+    -o-transition: color .25s ease-out;
+    transition: color .25s ease-out;
+}
+
+.goback:hover p {
+    color: white;
+}
+
+/* DIV MAIN DE CONTINGUT AL INDEX.HTML */
+
+.main {
+    padding-top: 58px!important;
+    max-width: 1050px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* DIV DE CONTINGUT A LA RESTA DE ARXIUS HTML*/
+
+.maincontent {
+    padding-top: 58px!important;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.main > img,
+.maincontent > img {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    height: 200px;
+}
+
+/* LINKS, ENLLAÇOS DEL ARXIU INDEX.HTML*/
+
+.links {
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.links > h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+}
+
+.links .inside {
+    overflow: hidden;
+    border: 2px dashed black;
+    border-radius: 10px;
+}
+
+.links .inside a {
+    height: 200px;
+    width: 25%!important;
+    float: left;
+}
+
+.links .inside a img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -o-transition: opacity .25s ease-out;
+    transition: opacity .25s ease-out;
+    box-sizing: border-box;
+    opacity: 0.6;
+}
+
+.links .inside a:nth-child(1) img {
+    border: 40px solid rgba(255, 255, 255, 0);
+    border-bottom: 20px;
+}
+
+.links .inside a:nth-child(2) img {
+    border-top: 25px;
+    border-left: 45px;
+    border-right: 50px;
+    border-bottom: 20px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.links .inside a:nth-child(3) img {
+    border-top: 30px;
+    border-bottom: 10px;
+    border-left: 30px;
+    border-right: 50px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.links .inside a:nth-child(4) img {
+    border-top: 45px;
+    border-bottom: 25px;
+    border-left: 55px;
+    border-right: 59px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.links .inside a:hover img {
+    opacity: 1;
+}
+
+.links .inside a p {
+    position: absolute!important;
+    padding-left: 30px;
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+    -webkit-transition: color .25s ease-out;
+    -moz-transition: color .25s ease-out;
+    -o-transition: color .25s ease-out;
+    transition: color .25s ease-out;
+    text-transform: uppercase;
+    text-align: center;
+    width: 10%;
+}
+
+.links .inside a:hover p, a.gallery:hover {
+    color: orange!important;
+    text-shadow: 1px 1px 3px white;
+    opacity: 1;
+
+}
+
+/* ENLLAÇ A LA GALERIA AL INDEX.HTML*/
+
+.main a.gallery {
+    float: right;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px dashed black;
+    border-radius: 10px;
+    -webkit-transition: color .25s ease-out;
+    -moz-transition: color .25s ease-out;
+    -o-transition: color .25s ease-out;
+    transition: color .25s ease-out;
+    margin-right: 15px;
+}
+
+/*DIV DIVIDED GENERAL, DINS DE MAIN */
+
+.divided {
+    overflow: hidden;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.divided .half {
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.divided h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    border-bottom: 2px dashed orange;
+    padding-bottom: 5px;
+}
+
+.divided #half1 p,
+.divided #half1 h2 {
+    margin-right: 15px;
+}
+
+.divided #half2 p,
+.divided #half2 h2 {
+    margin-left: 15px;
+}
+
+.citiestitle {
+    margin-top: 15px!important;
+}
+
+table.cities {
+    text-align: center;
+}
+
+/*CONTACT*/
+
+.contactform {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+
+.contactform label, .contactform input, .contactform textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactform label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contactform input, .contactform textarea {
+    margin-bottom: 12px;
+    padding: 5px;
+    resize: none;
+    overflow: auto;
+}
+
+.contactform textarea {
+    height: 150px;
+}
+
+.contactform input[type="button"] {
+    width: 15%;
+    float: right;
+    background-color: orange!important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/*HEADQUARTERS*/
+
+.hq {
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hqtitle {
+    font-size: bold;
+    border-color: black!important;
+    background: none;
+}
+
+bold {
+    font-weight: bold!important; 
+}
+
+.hq iframe {
+    float: left;
+}
+
+.hqp {
+    overflow: hidden;
+    padding-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+.hqp p {
+    width: 100%;
+}
+
+#leftie, #rightie {
+    overflow: hidden;
+    float: left;
+    width: 50%;
+}
+
+p#name {
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/*STORE*/
+
+.storeitems {
+    overflow: hidden;
+    float: left;
+    width: 50%;
+}
+
+.storeitems > div {
+    padding-right: 15px;
+}
+
+.storeregister {
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
+
+.contactform#store {
+    border-right: 0px!important;
+    padding: 0px;
+}
+
+.storeregister > h2 {
+    border-color: black!important;
+    background: none;
+}
+
+.storeitems p {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed black;
+    box-sizing: border-box;
+}
+
+.storeitems p .amount {
+    float: right;
+    width: 60px;
+}
+
+/* GALERIA */
+
+.galint {
+    width: 100%;
+}
+
+.galint img {
+    width: 19.5%;
+    padding-bottom: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-top: 1px solid black;
+    box-shadow: 1px 1px 20px grey;
+    height: 120px;
+    overflow: hidden;
+    position: static;
+    bottom: 0px;
+    position: relative;
+}
+
+footer .interior {
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+    padding: 7px;
+    background-image: url(../img/penny-juice-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right 20px top -8px;
+}
+
+/* NOM DE PENNY JUICE I NOM DE ALUMNE AL FOOTER */
+
+.interior .credits {
+    padding: 30px;
+    width: 20%;
+    padding-right: 0px;
+    overflow: hidden;
+    position: absolute;
+    font-size: 18px;
+}
+
+.interior .credits > p {
+    color: gray;
+    padding-left: 10px;
+    width: 100%;
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* LOGOTIPS DE L'ACTIVITAT */
+
+.logos {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    position: absolute;
+    height: 110px;
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: 28%;
+    display: block;
+}
+
+.vallbona {
+    width: 78%;
+    overflow: hidden;
+    margin: 0 auto;
+    float: left;
+}
+
+.vallbona > div {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+img.iso {
+    width: 6%;
+    height: 100%;
+    float: left;
+}
+
+.footertext {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ue {
+    float: right;
+    width: 16%;
+    height: 100%;
+}
+
+img.fp {
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
